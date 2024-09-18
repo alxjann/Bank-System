@@ -213,14 +213,14 @@ public:
 };
 
 void loginAccount(User& user) {
-    string hasAccount;
+    char hasAccount;
     
     do {
         cout << "Do you have an account? (y/n): ";
         cin >> hasAccount;
-    } while (hasAccount != "y" && hasAccount != "Y" && hasAccount != "n" && hasAccount != "N");
+    } while (hasAccount != 'y' && hasAccount != 'Y' && hasAccount != 'n' && hasAccount != 'N');
 
-    if (hasAccount == "y" || hasAccount == "Y") {
+    if (hasAccount == 'y' || hasAccount == 'Y') {
         cout << "\nPlease login to your account.\n";
         
         do {
@@ -235,7 +235,7 @@ void loginAccount(User& user) {
         } while (!user.auth.checkAccount(user.auth.userName, user.auth.password));
 
     } 
-    else if (hasAccount == "n" || hasAccount == "N") {
+    else if (hasAccount == 'n' || hasAccount == 'N') {
         cout << "\nPlease register an account.\n";
 
         do {
